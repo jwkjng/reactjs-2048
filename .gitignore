@@ -30,3 +30,6 @@ $RECYCLE.BIN/
 /dist/
 node_modules
 .tmp
+# Logs
+logs
+*.log
