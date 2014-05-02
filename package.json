@@ -1,0 +1,30 @@
+{
+  "name": "react2048",
+  "version": "0.1.0",
+  "description": "2048 using React JS",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "React",
+    "JS",
+    "2048",
+    "game",
+    "javascript",
+    "node.js"
+  ],
+  "author": "Jason Jung",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "~1.1.4",
+    "gulp-util": "~2.2.14",
+    "webpack-dev-server": "~1.2.7",
+    "gulp-react": "~0.3.1",
+    "gulp": "~3.6.0",
+    "connect": "~2.14.4",
+    "envify": "~1.2.1",
+    "react": "~0.10.0",
+    "jsx-loader": "~0.9.0",
+    "gulp-clean": "~0.2.4"
+  }
+}
