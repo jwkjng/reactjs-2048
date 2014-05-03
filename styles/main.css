@@ -61,10 +61,13 @@ h1 {
   display: -ms-flexbox;
   display: -webkit-flex;
   -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-align-content: space-around;
+          align-content: space-around;
   padding: 0;
   margin: 0;
   position: relative;
