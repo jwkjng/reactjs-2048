@@ -37,7 +37,7 @@ gulp.task('build', ['webpack', 'copy'], function() {
   return gutil.log('building...');
 });
 
-gulp.task('server', ['build'], function () {
+gulp.task('dev', ['build'], function () {
 
   gulp.watch([path.join(__dirname, 'src/**/*')], function () {
     gulp.run('build');
@@ -47,9 +47,21 @@ gulp.task('server', ['build'], function () {
     connect.static(config.webpack.output.path)
   );
 
-  gutil.log('[server] started...');
-  server.listen(process.ENV.PORT || 8888);
+  gutil.log('[server] started on port: 8888');
+  server.listen(8888);
 });
 
+gulp.task('server', ['build'], function () {
 
-gulp.task('default', ['server'], function () {});
+  gulp.watch([path.join(__dirname, 'src/**/*')], function () {
+    gulp.run('build');
+  });
+
+  var server = connect.createServer(
+    connect.static(config.webpack.output.path)
+  );
+  server.listen(80);
+});
+
+gulp.task('default', ['dev'], function () {});
+gulp.task('prod', ['server'], function () {});
