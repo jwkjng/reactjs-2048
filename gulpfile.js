@@ -48,7 +48,7 @@ gulp.task('server', ['build'], function () {
   );
 
   gutil.log('[server] started...');
-  server.listen(8888);
+  server.listen(process.ENV.PORT || 8888);
 });
 
 
